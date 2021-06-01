@@ -1,0 +1,250 @@
+2021-05-15 14:21:36.657  INFO 15416 --- [restartedMain] com.pan.BlogApplication                  : Starting BlogApplication on DESKTOP-SU2E50J with PID 15416 (F:\Desktop\blog\target\classes started by CdPan in F:\Desktop\blog)
+2021-05-15 14:21:36.664 DEBUG 15416 --- [restartedMain] com.pan.BlogApplication                  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2021-05-15 14:21:36.664  INFO 15416 --- [restartedMain] com.pan.BlogApplication                  : The following profiles are active: dev
+2021-05-15 14:21:36.710  INFO 15416 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-15 14:21:36.710  INFO 15416 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-15 14:21:37.960  INFO 15416 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-15 14:21:37.970  INFO 15416 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-15 14:21:37.971  INFO 15416 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-05-15 14:21:38.046  INFO 15416 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-15 14:21:38.046  INFO 15416 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1336 ms
+2021-05-15 14:21:38.679  INFO 15416 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-15 14:21:38.760  WARN 15416 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'loginController' method 
+com.pan.controller.admin.LoginController#loginpage()
+to {GET /admin}: There is already 'aboutShowController' bean method
+com.pan.controller.AboutShowController#about() mapped.
+2021-05-15 14:21:38.760  INFO 15416 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-15 14:21:38.762  INFO 15416 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-05-15 14:21:38.773  INFO 15416 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-15 14:21:38.776 ERROR 15416 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'loginController' method 
+com.pan.controller.admin.LoginController#loginpage()
+to {GET /admin}: There is already 'aboutShowController' bean method
+com.pan.controller.AboutShowController#about() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.pan.BlogApplication.main(BlogApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'loginController' method 
+com.pan.controller.admin.LoginController#loginpage()
+to {GET /admin}: There is already 'aboutShowController' bean method
+com.pan.controller.AboutShowController#about() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:632)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:599)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:379)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:78)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:190)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	... 21 common frames omitted
+
+2021-05-15 14:23:57.205  INFO 5776 --- [restartedMain] com.pan.BlogApplication                  : Starting BlogApplication on DESKTOP-SU2E50J with PID 5776 (F:\Desktop\blog\target\classes started by CdPan in F:\Desktop\blog)
+2021-05-15 14:23:57.208 DEBUG 5776 --- [restartedMain] com.pan.BlogApplication                  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2021-05-15 14:23:57.208  INFO 5776 --- [restartedMain] com.pan.BlogApplication                  : The following profiles are active: dev
+2021-05-15 14:23:57.251  INFO 5776 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-15 14:23:57.251  INFO 5776 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-15 14:23:58.654  INFO 5776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-15 14:23:58.666  INFO 5776 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-15 14:23:58.666  INFO 5776 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-05-15 14:23:58.740  INFO 5776 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-15 14:23:58.740  INFO 5776 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1488 ms
+2021-05-15 14:23:59.317  INFO 5776 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-15 14:23:59.409  INFO 5776 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-05-15 14:23:59.697  INFO 5776 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-15 14:23:59.732  INFO 5776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-15 14:23:59.734  INFO 5776 --- [restartedMain] com.pan.BlogApplication                  : Started BlogApplication in 2.943 seconds (JVM running for 3.334)
+2021-05-15 14:24:15.560  INFO 5776 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-15 14:24:15.561  INFO 5776 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-15 14:24:15.573  INFO 5776 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2021-05-15 14:24:15.609  INFO 5776 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-15 14:24:15.738  INFO 5776 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-15 14:24:15.790 DEBUG 5776 --- [http-nio-8080-exec-1] c.p.dao.BlogDao.getFirstPageBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM myblog.t_blog b, myblog.t_type t, myblog.t_user u WHERE b.type_id = t.id AND u.id = b.user_id 
+2021-05-15 14:24:15.814 DEBUG 5776 --- [http-nio-8080-exec-1] c.p.dao.BlogDao.getFirstPageBlog_COUNT   : ==> Parameters: 
+2021-05-15 14:24:15.836 DEBUG 5776 --- [http-nio-8080-exec-1] c.p.dao.BlogDao.getFirstPageBlog_COUNT   : <==      Total: 1
+2021-05-15 14:24:15.838 DEBUG 5776 --- [http-nio-8080-exec-1] com.pan.dao.BlogDao.getFirstPageBlog     : ==>  Preparing: select b.id,b.title,b.first_picture, b.views, b.comment_count,b.update_time,b.description, t.name , u.nickname, u.avatar from myblog.t_blog b, myblog.t_type t,myblog.t_user u where b.type_id = t.id and u.id = b.user_id order by b.update_time desc LIMIT ? 
+2021-05-15 14:24:15.839 DEBUG 5776 --- [http-nio-8080-exec-1] com.pan.dao.BlogDao.getFirstPageBlog     : ==> Parameters: 10(Integer)
+2021-05-15 14:24:15.841 DEBUG 5776 --- [http-nio-8080-exec-1] com.pan.dao.BlogDao.getFirstPageBlog     : <==      Total: 2
+2021-05-15 14:24:15.842 DEBUG 5776 --- [http-nio-8080-exec-1] com.pan.dao.BlogDao.getAllRecommendBlog  : ==>  Preparing: select * from myblog.t_blog where t_blog.recommend = true order by t_blog.update_time desc limit 4; 
+2021-05-15 14:24:15.842 DEBUG 5776 --- [http-nio-8080-exec-1] com.pan.dao.BlogDao.getAllRecommendBlog  : ==> Parameters: 
+2021-05-15 14:24:15.844 DEBUG 5776 --- [http-nio-8080-exec-1] com.pan.dao.BlogDao.getAllRecommendBlog  : <==      Total: 1
+2021-05-15 14:24:16.304 DEBUG 5776 --- [http-nio-8080-exec-4] com.pan.dao.BlogDao.getBlogTotal         : ==>  Preparing: select count(*) from myblog.t_blog 
+2021-05-15 14:24:16.304 DEBUG 5776 --- [http-nio-8080-exec-4] com.pan.dao.BlogDao.getBlogTotal         : ==> Parameters: 
+2021-05-15 14:24:16.305 DEBUG 5776 --- [http-nio-8080-exec-4] com.pan.dao.BlogDao.getBlogTotal         : <==      Total: 1
+2021-05-15 14:24:16.306 DEBUG 5776 --- [http-nio-8080-exec-4] com.pan.dao.BlogDao.getBlogViewTotal     : ==>  Preparing: select sum(views) from myblog.t_blog 
+2021-05-15 14:24:16.306 DEBUG 5776 --- [http-nio-8080-exec-4] com.pan.dao.BlogDao.getBlogViewTotal     : ==> Parameters: 
+2021-05-15 14:24:16.307 DEBUG 5776 --- [http-nio-8080-exec-4] com.pan.dao.BlogDao.getBlogViewTotal     : <==      Total: 1
+2021-05-15 14:24:16.307 DEBUG 5776 --- [http-nio-8080-exec-4] com.pan.dao.BlogDao.getBlogCommentTotal  : ==>  Preparing: select count(*) from myblog.t_comment 
+2021-05-15 14:24:16.308 DEBUG 5776 --- [http-nio-8080-exec-4] com.pan.dao.BlogDao.getBlogCommentTotal  : ==> Parameters: 
+2021-05-15 14:24:16.308 DEBUG 5776 --- [http-nio-8080-exec-4] com.pan.dao.BlogDao.getBlogCommentTotal  : <==      Total: 1
+2021-05-15 14:24:16.309 DEBUG 5776 --- [http-nio-8080-exec-4] com.pan.dao.BlogDao.getBlogMessageTotal  : ==>  Preparing: select count(*) from myblog.t_message 
+2021-05-15 14:24:16.309 DEBUG 5776 --- [http-nio-8080-exec-4] com.pan.dao.BlogDao.getBlogMessageTotal  : ==> Parameters: 
+2021-05-15 14:24:16.310 DEBUG 5776 --- [http-nio-8080-exec-4] com.pan.dao.BlogDao.getBlogMessageTotal  : <==      Total: 1
+2021-05-15 14:24:17.041 DEBUG 5776 --- [http-nio-8080-exec-3] c.p.dao.BlogDao.getFirstPageBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM myblog.t_blog b, myblog.t_type t, myblog.t_user u WHERE b.type_id = t.id AND u.id = b.user_id 
+2021-05-15 14:24:17.042 DEBUG 5776 --- [http-nio-8080-exec-3] c.p.dao.BlogDao.getFirstPageBlog_COUNT   : ==> Parameters: 
+2021-05-15 14:24:17.043 DEBUG 5776 --- [http-nio-8080-exec-3] c.p.dao.BlogDao.getFirstPageBlog_COUNT   : <==      Total: 1
+2021-05-15 14:24:17.044 DEBUG 5776 --- [http-nio-8080-exec-3] com.pan.dao.BlogDao.getFirstPageBlog     : ==>  Preparing: select b.id,b.title,b.first_picture, b.views, b.comment_count,b.update_time,b.description, t.name , u.nickname, u.avatar from myblog.t_blog b, myblog.t_type t,myblog.t_user u where b.type_id = t.id and u.id = b.user_id order by b.update_time desc LIMIT ? 
+2021-05-15 14:24:17.044 DEBUG 5776 --- [http-nio-8080-exec-3] com.pan.dao.BlogDao.getFirstPageBlog     : ==> Parameters: 10(Integer)
+2021-05-15 14:24:17.045 DEBUG 5776 --- [http-nio-8080-exec-3] com.pan.dao.BlogDao.getFirstPageBlog     : <==      Total: 2
+2021-05-15 14:24:17.046 DEBUG 5776 --- [http-nio-8080-exec-3] com.pan.dao.BlogDao.getAllRecommendBlog  : ==>  Preparing: select * from myblog.t_blog where t_blog.recommend = true order by t_blog.update_time desc limit 4; 
+2021-05-15 14:24:17.046 DEBUG 5776 --- [http-nio-8080-exec-3] com.pan.dao.BlogDao.getAllRecommendBlog  : ==> Parameters: 
+2021-05-15 14:24:17.047 DEBUG 5776 --- [http-nio-8080-exec-3] com.pan.dao.BlogDao.getAllRecommendBlog  : <==      Total: 1
+2021-05-15 14:24:17.477 DEBUG 5776 --- [http-nio-8080-exec-5] com.pan.dao.BlogDao.getBlogTotal         : ==>  Preparing: select count(*) from myblog.t_blog 
+2021-05-15 14:24:17.477 DEBUG 5776 --- [http-nio-8080-exec-5] com.pan.dao.BlogDao.getBlogTotal         : ==> Parameters: 
+2021-05-15 14:24:17.478 DEBUG 5776 --- [http-nio-8080-exec-5] com.pan.dao.BlogDao.getBlogTotal         : <==      Total: 1
+2021-05-15 14:24:17.478 DEBUG 5776 --- [http-nio-8080-exec-5] com.pan.dao.BlogDao.getBlogViewTotal     : ==>  Preparing: select sum(views) from myblog.t_blog 
+2021-05-15 14:24:17.478 DEBUG 5776 --- [http-nio-8080-exec-5] com.pan.dao.BlogDao.getBlogViewTotal     : ==> Parameters: 
+2021-05-15 14:24:17.479 DEBUG 5776 --- [http-nio-8080-exec-5] com.pan.dao.BlogDao.getBlogViewTotal     : <==      Total: 1
+2021-05-15 14:24:17.479 DEBUG 5776 --- [http-nio-8080-exec-5] com.pan.dao.BlogDao.getBlogCommentTotal  : ==>  Preparing: select count(*) from myblog.t_comment 
+2021-05-15 14:24:17.479 DEBUG 5776 --- [http-nio-8080-exec-5] com.pan.dao.BlogDao.getBlogCommentTotal  : ==> Parameters: 
+2021-05-15 14:24:17.480 DEBUG 5776 --- [http-nio-8080-exec-5] com.pan.dao.BlogDao.getBlogCommentTotal  : <==      Total: 1
+2021-05-15 14:24:17.480 DEBUG 5776 --- [http-nio-8080-exec-5] com.pan.dao.BlogDao.getBlogMessageTotal  : ==>  Preparing: select count(*) from myblog.t_message 
+2021-05-15 14:24:17.480 DEBUG 5776 --- [http-nio-8080-exec-5] com.pan.dao.BlogDao.getBlogMessageTotal  : ==> Parameters: 
+2021-05-15 14:24:17.481 DEBUG 5776 --- [http-nio-8080-exec-5] com.pan.dao.BlogDao.getBlogMessageTotal  : <==      Total: 1
+2021-05-15 14:24:19.576 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getBlogTotal         : ==>  Preparing: select count(*) from myblog.t_blog 
+2021-05-15 14:24:19.577 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getBlogTotal         : ==> Parameters: 
+2021-05-15 14:24:19.577 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getBlogTotal         : <==      Total: 1
+2021-05-15 14:24:19.578 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getBlogViewTotal     : ==>  Preparing: select sum(views) from myblog.t_blog 
+2021-05-15 14:24:19.578 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getBlogViewTotal     : ==> Parameters: 
+2021-05-15 14:24:19.579 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getBlogViewTotal     : <==      Total: 1
+2021-05-15 14:24:19.580 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getBlogCommentTotal  : ==>  Preparing: select count(*) from myblog.t_comment 
+2021-05-15 14:24:19.580 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getBlogCommentTotal  : ==> Parameters: 
+2021-05-15 14:24:19.581 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getBlogCommentTotal  : <==      Total: 1
+2021-05-15 14:24:19.582 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getBlogMessageTotal  : ==>  Preparing: select count(*) from myblog.t_message 
+2021-05-15 14:24:19.582 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getBlogMessageTotal  : ==> Parameters: 
+2021-05-15 14:24:19.582 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getBlogMessageTotal  : <==      Total: 1
+2021-05-15 14:24:23.897 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getBlogTotal         : ==>  Preparing: select count(*) from myblog.t_blog 
+2021-05-15 14:24:23.897 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getBlogTotal         : ==> Parameters: 
+2021-05-15 14:24:23.897 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getBlogTotal         : <==      Total: 1
+2021-05-15 14:24:23.898 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getBlogViewTotal     : ==>  Preparing: select sum(views) from myblog.t_blog 
+2021-05-15 14:24:23.898 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getBlogViewTotal     : ==> Parameters: 
+2021-05-15 14:24:23.899 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getBlogViewTotal     : <==      Total: 1
+2021-05-15 14:24:23.899 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getBlogCommentTotal  : ==>  Preparing: select count(*) from myblog.t_comment 
+2021-05-15 14:24:23.899 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getBlogCommentTotal  : ==> Parameters: 
+2021-05-15 14:24:23.900 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getBlogCommentTotal  : <==      Total: 1
+2021-05-15 14:24:23.900 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getBlogMessageTotal  : ==>  Preparing: select count(*) from myblog.t_message 
+2021-05-15 14:24:23.900 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getBlogMessageTotal  : ==> Parameters: 
+2021-05-15 14:24:23.901 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getBlogMessageTotal  : <==      Total: 1
+2021-05-15 14:24:23.925 DEBUG 5776 --- [http-nio-8080-exec-6] c.pan.dao.MessageDao.findByParentIdNull  : ==>  Preparing: select * from myblog.t_message c where c.parent_message_id = ? order by c.create_time desc 
+2021-05-15 14:24:23.925 DEBUG 5776 --- [http-nio-8080-exec-6] c.pan.dao.MessageDao.findByParentIdNull  : ==> Parameters: -1(Long)
+2021-05-15 14:24:23.927 DEBUG 5776 --- [http-nio-8080-exec-6] c.pan.dao.MessageDao.findByParentIdNull  : <==      Total: 1
+2021-05-15 14:24:23.928 DEBUG 5776 --- [http-nio-8080-exec-6] c.p.d.MessageDao.findByParentIdNotNull   : ==>  Preparing: select * from myblog.t_message c where c.parent_message_id = ? order by c.create_time desc 
+2021-05-15 14:24:23.928 DEBUG 5776 --- [http-nio-8080-exec-6] c.p.d.MessageDao.findByParentIdNotNull   : ==> Parameters: 1(Long)
+2021-05-15 14:24:23.929 DEBUG 5776 --- [http-nio-8080-exec-6] c.p.d.MessageDao.findByParentIdNotNull   : <==      Total: 0
+2021-05-15 14:24:24.486 DEBUG 5776 --- [http-nio-8080-exec-2] com.pan.dao.PictureDao.listPicture       : ==>  Preparing: select * from myblog.t_picture order by t_picture.id desc 
+2021-05-15 14:24:24.486 DEBUG 5776 --- [http-nio-8080-exec-2] com.pan.dao.PictureDao.listPicture       : ==> Parameters: 
+2021-05-15 14:24:24.488 DEBUG 5776 --- [http-nio-8080-exec-2] com.pan.dao.PictureDao.listPicture       : <==      Total: 2
+2021-05-15 14:24:24.559 DEBUG 5776 --- [http-nio-8080-exec-2] com.pan.dao.BlogDao.getBlogTotal         : ==>  Preparing: select count(*) from myblog.t_blog 
+2021-05-15 14:24:24.559 DEBUG 5776 --- [http-nio-8080-exec-2] com.pan.dao.BlogDao.getBlogTotal         : ==> Parameters: 
+2021-05-15 14:24:24.560 DEBUG 5776 --- [http-nio-8080-exec-2] com.pan.dao.BlogDao.getBlogTotal         : <==      Total: 1
+2021-05-15 14:24:24.561 DEBUG 5776 --- [http-nio-8080-exec-2] com.pan.dao.BlogDao.getBlogViewTotal     : ==>  Preparing: select sum(views) from myblog.t_blog 
+2021-05-15 14:24:24.561 DEBUG 5776 --- [http-nio-8080-exec-2] com.pan.dao.BlogDao.getBlogViewTotal     : ==> Parameters: 
+2021-05-15 14:24:24.561 DEBUG 5776 --- [http-nio-8080-exec-2] com.pan.dao.BlogDao.getBlogViewTotal     : <==      Total: 1
+2021-05-15 14:24:24.562 DEBUG 5776 --- [http-nio-8080-exec-2] com.pan.dao.BlogDao.getBlogCommentTotal  : ==>  Preparing: select count(*) from myblog.t_comment 
+2021-05-15 14:24:24.562 DEBUG 5776 --- [http-nio-8080-exec-2] com.pan.dao.BlogDao.getBlogCommentTotal  : ==> Parameters: 
+2021-05-15 14:24:24.563 DEBUG 5776 --- [http-nio-8080-exec-2] com.pan.dao.BlogDao.getBlogCommentTotal  : <==      Total: 1
+2021-05-15 14:24:24.563 DEBUG 5776 --- [http-nio-8080-exec-2] com.pan.dao.BlogDao.getBlogMessageTotal  : ==>  Preparing: select count(*) from myblog.t_message 
+2021-05-15 14:24:24.563 DEBUG 5776 --- [http-nio-8080-exec-2] com.pan.dao.BlogDao.getBlogMessageTotal  : ==> Parameters: 
+2021-05-15 14:24:24.564 DEBUG 5776 --- [http-nio-8080-exec-2] com.pan.dao.BlogDao.getBlogMessageTotal  : <==      Total: 1
+2021-05-15 14:24:26.423 DEBUG 5776 --- [http-nio-8080-exec-3] com.pan.dao.BlogDao.getAllBlogQuery      : ==>  Preparing: select b.id,b.title,b.update_time,b.recommend,b.published,b.type_id,t.id,t.name from myblog.t_blog b left outer join myblog.t_type t on b.type_id = t.id order by b.update_time desc 
+2021-05-15 14:24:26.423 DEBUG 5776 --- [http-nio-8080-exec-3] com.pan.dao.BlogDao.getAllBlogQuery      : ==> Parameters: 
+2021-05-15 14:24:26.425 DEBUG 5776 --- [http-nio-8080-exec-3] com.pan.dao.BlogDao.getAllBlogQuery      : <==      Total: 2
+2021-05-15 14:24:26.484 DEBUG 5776 --- [http-nio-8080-exec-5] com.pan.dao.BlogDao.getBlogTotal         : ==>  Preparing: select count(*) from myblog.t_blog 
+2021-05-15 14:24:26.485 DEBUG 5776 --- [http-nio-8080-exec-5] com.pan.dao.BlogDao.getBlogTotal         : ==> Parameters: 
+2021-05-15 14:24:26.485 DEBUG 5776 --- [http-nio-8080-exec-5] com.pan.dao.BlogDao.getBlogTotal         : <==      Total: 1
+2021-05-15 14:24:26.486 DEBUG 5776 --- [http-nio-8080-exec-5] com.pan.dao.BlogDao.getBlogViewTotal     : ==>  Preparing: select sum(views) from myblog.t_blog 
+2021-05-15 14:24:26.486 DEBUG 5776 --- [http-nio-8080-exec-5] com.pan.dao.BlogDao.getBlogViewTotal     : ==> Parameters: 
+2021-05-15 14:24:26.486 DEBUG 5776 --- [http-nio-8080-exec-5] com.pan.dao.BlogDao.getBlogViewTotal     : <==      Total: 1
+2021-05-15 14:24:26.486 DEBUG 5776 --- [http-nio-8080-exec-5] com.pan.dao.BlogDao.getBlogCommentTotal  : ==>  Preparing: select count(*) from myblog.t_comment 
+2021-05-15 14:24:26.487 DEBUG 5776 --- [http-nio-8080-exec-5] com.pan.dao.BlogDao.getBlogCommentTotal  : ==> Parameters: 
+2021-05-15 14:24:26.487 DEBUG 5776 --- [http-nio-8080-exec-5] com.pan.dao.BlogDao.getBlogCommentTotal  : <==      Total: 1
+2021-05-15 14:24:26.487 DEBUG 5776 --- [http-nio-8080-exec-5] com.pan.dao.BlogDao.getBlogMessageTotal  : ==>  Preparing: select count(*) from myblog.t_message 
+2021-05-15 14:24:26.488 DEBUG 5776 --- [http-nio-8080-exec-5] com.pan.dao.BlogDao.getBlogMessageTotal  : ==> Parameters: 
+2021-05-15 14:24:26.489 DEBUG 5776 --- [http-nio-8080-exec-5] com.pan.dao.BlogDao.getBlogMessageTotal  : <==      Total: 1
+2021-05-15 14:24:27.687 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.TypeDao.getAllTypeAndBlog    : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title,b.type_id from myblog.t_type t,myblog.t_blog b where t.id = b.type_id 
+2021-05-15 14:24:27.688 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.TypeDao.getAllTypeAndBlog    : ==> Parameters: 
+2021-05-15 14:24:27.690 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.TypeDao.getAllTypeAndBlog    : <==      Total: 2
+2021-05-15 14:24:27.701 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getByTypeId          : ==>  Preparing: select b.id,b.title,b.first_picture, b.views, b.comment_count, b.update_time, b.description, t.name , u.nickname, u.avatar from myblog.t_blog b, myblog.t_type t,myblog.t_user u where b.type_id = t.id and u.id = b.user_id and b.type_id = ? order by b.update_time desc 
+2021-05-15 14:24:27.702 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getByTypeId          : ==> Parameters: 1(Long)
+2021-05-15 14:24:27.703 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getByTypeId          : <==      Total: 2
+2021-05-15 14:24:27.787 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getBlogTotal         : ==>  Preparing: select count(*) from myblog.t_blog 
+2021-05-15 14:24:27.787 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getBlogTotal         : ==> Parameters: 
+2021-05-15 14:24:27.789 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getBlogTotal         : <==      Total: 1
+2021-05-15 14:24:27.790 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getBlogViewTotal     : ==>  Preparing: select sum(views) from myblog.t_blog 
+2021-05-15 14:24:27.790 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getBlogViewTotal     : ==> Parameters: 
+2021-05-15 14:24:27.791 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getBlogViewTotal     : <==      Total: 1
+2021-05-15 14:24:27.791 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getBlogCommentTotal  : ==>  Preparing: select count(*) from myblog.t_comment 
+2021-05-15 14:24:27.792 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getBlogCommentTotal  : ==> Parameters: 
+2021-05-15 14:24:27.793 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getBlogCommentTotal  : <==      Total: 1
+2021-05-15 14:24:27.794 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getBlogMessageTotal  : ==>  Preparing: select count(*) from myblog.t_message 
+2021-05-15 14:24:27.794 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getBlogMessageTotal  : ==> Parameters: 
+2021-05-15 14:24:27.795 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getBlogMessageTotal  : <==      Total: 1
+2021-05-15 14:24:28.932 DEBUG 5776 --- [http-nio-8080-exec-8] c.p.dao.BlogDao.getFirstPageBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM myblog.t_blog b, myblog.t_type t, myblog.t_user u WHERE b.type_id = t.id AND u.id = b.user_id 
+2021-05-15 14:24:28.933 DEBUG 5776 --- [http-nio-8080-exec-8] c.p.dao.BlogDao.getFirstPageBlog_COUNT   : ==> Parameters: 
+2021-05-15 14:24:28.933 DEBUG 5776 --- [http-nio-8080-exec-8] c.p.dao.BlogDao.getFirstPageBlog_COUNT   : <==      Total: 1
+2021-05-15 14:24:28.933 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getFirstPageBlog     : ==>  Preparing: select b.id,b.title,b.first_picture, b.views, b.comment_count,b.update_time,b.description, t.name , u.nickname, u.avatar from myblog.t_blog b, myblog.t_type t,myblog.t_user u where b.type_id = t.id and u.id = b.user_id order by b.update_time desc LIMIT ? 
+2021-05-15 14:24:28.934 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getFirstPageBlog     : ==> Parameters: 10(Integer)
+2021-05-15 14:24:28.935 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getFirstPageBlog     : <==      Total: 2
+2021-05-15 14:24:28.935 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getAllRecommendBlog  : ==>  Preparing: select * from myblog.t_blog where t_blog.recommend = true order by t_blog.update_time desc limit 4; 
+2021-05-15 14:24:28.935 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getAllRecommendBlog  : ==> Parameters: 
+2021-05-15 14:24:28.941 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getAllRecommendBlog  : <==      Total: 1
+2021-05-15 14:24:29.011 DEBUG 5776 --- [http-nio-8080-exec-3] com.pan.dao.BlogDao.getBlogTotal         : ==>  Preparing: select count(*) from myblog.t_blog 
+2021-05-15 14:24:29.011 DEBUG 5776 --- [http-nio-8080-exec-3] com.pan.dao.BlogDao.getBlogTotal         : ==> Parameters: 
+2021-05-15 14:24:29.012 DEBUG 5776 --- [http-nio-8080-exec-3] com.pan.dao.BlogDao.getBlogTotal         : <==      Total: 1
+2021-05-15 14:24:29.013 DEBUG 5776 --- [http-nio-8080-exec-3] com.pan.dao.BlogDao.getBlogViewTotal     : ==>  Preparing: select sum(views) from myblog.t_blog 
+2021-05-15 14:24:29.013 DEBUG 5776 --- [http-nio-8080-exec-3] com.pan.dao.BlogDao.getBlogViewTotal     : ==> Parameters: 
+2021-05-15 14:24:29.013 DEBUG 5776 --- [http-nio-8080-exec-3] com.pan.dao.BlogDao.getBlogViewTotal     : <==      Total: 1
+2021-05-15 14:24:29.014 DEBUG 5776 --- [http-nio-8080-exec-3] com.pan.dao.BlogDao.getBlogCommentTotal  : ==>  Preparing: select count(*) from myblog.t_comment 
+2021-05-15 14:24:29.014 DEBUG 5776 --- [http-nio-8080-exec-3] com.pan.dao.BlogDao.getBlogCommentTotal  : ==> Parameters: 
+2021-05-15 14:24:29.014 DEBUG 5776 --- [http-nio-8080-exec-3] com.pan.dao.BlogDao.getBlogCommentTotal  : <==      Total: 1
+2021-05-15 14:24:29.014 DEBUG 5776 --- [http-nio-8080-exec-3] com.pan.dao.BlogDao.getBlogMessageTotal  : ==>  Preparing: select count(*) from myblog.t_message 
+2021-05-15 14:24:29.014 DEBUG 5776 --- [http-nio-8080-exec-3] com.pan.dao.BlogDao.getBlogMessageTotal  : ==> Parameters: 
+2021-05-15 14:24:29.015 DEBUG 5776 --- [http-nio-8080-exec-3] com.pan.dao.BlogDao.getBlogMessageTotal  : <==      Total: 1
+2021-05-15 15:47:42.807 DEBUG 5776 --- [http-nio-8080-exec-6] c.p.dao.BlogDao.getFirstPageBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM myblog.t_blog b, myblog.t_type t, myblog.t_user u WHERE b.type_id = t.id AND u.id = b.user_id 
+2021-05-15 15:47:42.811 DEBUG 5776 --- [http-nio-8080-exec-6] c.p.dao.BlogDao.getFirstPageBlog_COUNT   : ==> Parameters: 
+2021-05-15 15:47:42.815 DEBUG 5776 --- [http-nio-8080-exec-6] c.p.dao.BlogDao.getFirstPageBlog_COUNT   : <==      Total: 1
+2021-05-15 15:47:42.816 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getFirstPageBlog     : ==>  Preparing: select b.id,b.title,b.first_picture, b.views, b.comment_count,b.update_time,b.description, t.name , u.nickname, u.avatar from myblog.t_blog b, myblog.t_type t,myblog.t_user u where b.type_id = t.id and u.id = b.user_id order by b.update_time desc LIMIT ? 
+2021-05-15 15:47:42.816 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getFirstPageBlog     : ==> Parameters: 10(Integer)
+2021-05-15 15:47:42.818 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getFirstPageBlog     : <==      Total: 2
+2021-05-15 15:47:42.818 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getAllRecommendBlog  : ==>  Preparing: select * from myblog.t_blog where t_blog.recommend = true order by t_blog.update_time desc limit 4; 
+2021-05-15 15:47:42.818 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getAllRecommendBlog  : ==> Parameters: 
+2021-05-15 15:47:42.820 DEBUG 5776 --- [http-nio-8080-exec-6] com.pan.dao.BlogDao.getAllRecommendBlog  : <==      Total: 1
+2021-05-15 15:47:43.001 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getBlogTotal         : ==>  Preparing: select count(*) from myblog.t_blog 
+2021-05-15 15:47:43.001 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getBlogTotal         : ==> Parameters: 
+2021-05-15 15:47:43.002 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getBlogTotal         : <==      Total: 1
+2021-05-15 15:47:43.002 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getBlogViewTotal     : ==>  Preparing: select sum(views) from myblog.t_blog 
+2021-05-15 15:47:43.002 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getBlogViewTotal     : ==> Parameters: 
+2021-05-15 15:47:43.003 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getBlogViewTotal     : <==      Total: 1
+2021-05-15 15:47:43.003 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getBlogCommentTotal  : ==>  Preparing: select count(*) from myblog.t_comment 
+2021-05-15 15:47:43.003 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getBlogCommentTotal  : ==> Parameters: 
+2021-05-15 15:47:43.004 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getBlogCommentTotal  : <==      Total: 1
+2021-05-15 15:47:43.004 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getBlogMessageTotal  : ==>  Preparing: select count(*) from myblog.t_message 
+2021-05-15 15:47:43.004 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getBlogMessageTotal  : ==> Parameters: 
+2021-05-15 15:47:43.005 DEBUG 5776 --- [http-nio-8080-exec-8] com.pan.dao.BlogDao.getBlogMessageTotal  : <==      Total: 1
